@@ -1,0 +1,32 @@
+@import "/css/core/base.css";
+
+footer {
+    padding:70px 70px 100px var(--left-margin) ;
+    background-color: var(--darker-blue-color);
+    color: white;
+
+    font-family: var(--form-font-family);
+    font-size: 12px;
+    line-height: 26px;
+}
+
+footer nav > ul {
+    display: flex;
+    column-gap: 100px;
+}
+
+footer nav > ul h4 {
+    padding-bottom: 20px;
+    color: var(--primary-color);
+}
+
+footer nav > ul li {
+
+}
+
+footer > p {
+    color: var(--dark-blue-color);
+    font-size: 12px;
+
+    margin-top: 50px;
+}

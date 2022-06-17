@@ -1,0 +1,13 @@
+:root {
+    --orange-color: #f26522;
+    --dark-blue-color: #83969f;
+    --darker-blue-color: #323339;
+    --gray-color: #cfcfcf;
+
+    --left-margin: 175px;
+    --primary-color: var(--orange-color);
+}
+
+* {
+    box-sizing: border-box;
+}

@@ -1,0 +1,35 @@
+@import "/css/core/base.css";
+
+header {
+    position: absolute;
+    top: 0px;
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    padding: 50px;
+    padding-left: var(--left-margin);
+}
+
+header nav ul {
+    display: flex;
+    column-gap: 50px;
+}
+
+header nav a {
+    font-family: var(--header-font-family);
+    font-size: 13px;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+header nav li {
+    padding: 10px 0px;
+    border-bottom: 2px solid transparent;
+}
+
+header nav li.active {
+    border-bottom-color: var(--primary-color);
+}

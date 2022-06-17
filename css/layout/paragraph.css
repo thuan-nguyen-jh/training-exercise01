@@ -1,0 +1,12 @@
+.paragraph {
+    display: flex;
+    column-gap: 25px;
+}
+
+.paragraph .col {
+    flex: 1;
+}
+
+.paragraph p {
+    margin-top: 30px;
+}

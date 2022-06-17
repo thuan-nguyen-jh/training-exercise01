@@ -1,0 +1,158 @@
+@import "/css/core/reset.css";
+@import "/css/core/base.css";
+@import "/css/core/typography.css";
+@import "/css/layout/header.css";
+@import "/css/layout/footer.css";
+@import "/css/layout/display-block.css";
+@import "/css/layout/paragraph.css";
+
+#sleek-as-fkuc {
+    height: 100vh;
+    min-height: calc(3 * var(--image-block-height));
+
+    background-image: url("/asset/background.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#sleek-as-fkuc .content {
+    position: absolute;
+    top: 50%;
+    left: var(--left-margin);
+
+    width: 400px;
+    color: white;
+    font-size: 15px;
+}
+
+#bright-ass-orange {
+    margin-top: calc(var(--image-block-height) * -1);
+    margin-left:calc(3 * var(--left-margin));
+}
+
+#bright-ass-orange > .image-block {
+    background-image: url(/asset/mountain1.png);
+}
+
+#bright-ass-orange > .horizontal-block .twitter-link {
+    margin-top: 50px;
+
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+
+#bright-ass-orange > .horizontal-block .twitter-link .link {
+    font-family: var(--form-font-family);
+    font-size: 12px;
+    color: var(--gray-color);
+}
+
+#melbourne-australia {
+    margin: 70px var(--left-margin);
+}
+
+#melbourne-australia .content {
+    color: var(--dark-blue-color);
+}
+
+#melbourne-australia > .paragraph > .col:first-child  > p:first-child {
+    font-weight: 300;
+    font-size: 18px;
+    color: var(--gray-color);
+}
+
+#words-and-such .header .background {
+    height: 100vh;
+
+    background-image: url("/asset/background2.png");
+    background-size: cover;
+    background-position: bottom center;
+    background-attachment: fixed
+}
+
+#words-and-such .header .content {
+    display: flex;
+
+    margin-left: var(--left-margin);
+    height: 500px;
+    width: 50vw;
+    margin-top: -500px;
+}
+
+#words-and-such .header .content .text {
+    width: 50%;
+    padding: 100px 100px 100px 50px;
+    background-color: var(--primary-color);
+    color: white;
+
+}
+
+#words-and-such .header .content .avatar {
+    width: 50%;
+    background-image: url("/asset/avatar.png");
+    background-size: cover;
+}
+
+#words-and-such > .content {
+    background-color: var(--primary-color);
+    color: white;
+    margin-left: var(--left-margin);
+    padding: 100px 200px 100px 50px;
+}
+
+#take-action {
+    background-color: var(--darker-blue-color);
+    color: white;
+
+    margin-left: var(--left-margin);
+    padding: 50px;
+}
+
+#take-action form {
+    display: flex;
+    column-gap: 10px;
+
+    margin: 30px 0px;
+    font-family: var(--form-font-family);
+    font-size: 12px;
+}
+
+#take-action form > input {
+    border: none;
+    padding: 20px;
+    color: var(--dark-blue-color);
+}
+
+#take-action form > button {
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+
+    padding: 0px 50px;
+}
+
+#ohh-this-is-nice {
+    margin-left: var(--left-margin);
+}
+
+#ohh-this-is-nice > .background {
+    height: 100vh;
+    background-image: url(/asset/background.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#ohh-this-is-nice > .content {
+    margin-top: calc(-2 / 3 * var(--image-block-height));
+    margin-right: var(--left-margin);
+}
+
+#ohh-this-is-nice > .content .image-block {
+    background-image: url(/asset/mountain2.png);
+}
+
+.title {
+    width: 80%;
+    margin-bottom: 20px;
+}
