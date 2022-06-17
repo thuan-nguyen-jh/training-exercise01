@@ -12,7 +12,9 @@ footer {
 
 footer nav > ul {
     display: flex;
+    flex-wrap: wrap;
     column-gap: 100px;
+    row-gap: 50px;
 }
 
 footer nav > ul h4 {
@@ -20,13 +22,15 @@ footer nav > ul h4 {
     color: var(--primary-color);
 }
 
-footer nav > ul li {
-
-}
-
 footer > p {
     color: var(--dark-blue-color);
     font-size: 12px;
 
     margin-top: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+    footer {
+        padding: 50px;
+    }
 }

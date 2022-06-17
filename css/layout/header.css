@@ -1,5 +1,6 @@
 @import "/css/core/base.css";
 
+
 header {
     position: absolute;
     top: 0px;
@@ -33,3 +34,17 @@ header nav li {
 header nav li.active {
     border-bottom-color: var(--primary-color);
 }
+
+@media only screen and (max-width: 600px) {
+    header {
+        padding: 50px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+    
+    header .logo {
+        display: none;
+    }
+  }
