@@ -4,7 +4,8 @@
     --darker-blue-color: #323339;
     --gray-color: #cfcfcf;
 
-    --left-margin: 175px;
+    --default-margin: 175px;
+    --mobile-margin: 50px;
     --primary-color: var(--orange-color);
 }
 

@@ -6,6 +6,11 @@
 @import "/css/layout/display-block.css";
 @import "/css/layout/paragraph.css";
 
+.title {
+    width: 80%;
+    margin-bottom: 20px;
+}
+
 #sleek-as-fkuc {
     height: 100vh;
     min-height: calc(3 * var(--image-block-height));
@@ -18,12 +23,13 @@
 #sleek-as-fkuc .content {
     position: absolute;
     top: 50%;
-    margin-left: var(--left-margin);
+    left: var(--default-margin);
 
     width: 400px;
     max-width: 80%;
-    color: white;
+
     font-size: 15px;
+    color: white;
 }
 
 #bright-ass-orange {
@@ -32,10 +38,10 @@
 }
 
 #bright-ass-orange > .image-block {
-    background-image: url(/asset/mountain1.png);
+    background-image: url("/asset/mountain1.png");
 }
 
-#bright-ass-orange > .horizontal-block .twitter-link {
+#bright-ass-orange .tweet {
     margin-top: 50px;
 
     display: flex;
@@ -43,63 +49,66 @@
     align-items: center;
 }
 
-#bright-ass-orange > .horizontal-block .twitter-link .link {
-    font-family: var(--form-font-family);
+#bright-ass-orange .tweet__link {
+    font-family: var(--alternative-font-family);
     font-size: 12px;
     color: var(--gray-color);
 }
 
 #melbourne-australia {
-    margin: 70px var(--left-margin);
+    margin: 70px var(--default-margin);
 }
 
-#melbourne-australia .content {
+#melbourne-australia .paragraph {
     color: var(--dark-blue-color);
+    margin: 30px 0px;
 }
 
-#melbourne-australia > .paragraph > .col:first-child  > p:first-child {
+#melbourne-australia .paragraph p:first-child {
+    font-size: 1.2rem;
     font-weight: 300;
-    font-size: 18px;
+
     color: var(--gray-color);
 }
 
-#words-and-such .header .background {
-    height: 100vh;
+#words-and-such .header__background {
+    height: 70vh;
+    min-height: 600px;
 
     background-image: url("/asset/background2.png");
     background-size: cover;
     background-position: bottom center;
-    background-attachment: fixed
+    background-attachment: fixed;
 }
 
-#words-and-such .header .content {
+#words-and-such .header__content {
     display: flex;
 
-    margin-left: var(--left-margin);
-    height: 500px;
-    min-width: 600px;
+    margin-top: -400px;
+    margin-left: var(--default-margin);
+
     width: 50vw;
-    margin-top: -500px;
+    min-width: 600px;
+    height: 400px;
 }
 
-#words-and-such .header .content .text {
+#words-and-such .header__content__text {
     width: 50%;
     padding: 100px 100px 100px 50px;
     background-color: var(--primary-color);
     color: white;
-
 }
 
-#words-and-such .header .content .avatar {
+#words-and-such .header__content__avatar {
     width: 50%;
     background-image: url("/asset/avatar.png");
     background-size: cover;
 }
 
-#words-and-such > .content {
+#words-and-such .paragraph {
     background-color: var(--primary-color);
     color: white;
-    margin-left: var(--left-margin);
+    margin-left: var(--default-margin);
     padding: 100px 200px 100px 50px;
 }
 
@@ -107,7 +116,7 @@
     background-color: var(--darker-blue-color);
     color: white;
 
-    margin-left: var(--left-margin);
+    margin-left: var(--default-margin);
     padding: 50px;
 }
 
@@ -116,7 +125,7 @@
     gap: 10px;
 
     margin: 30px 0px;
-    font-family: var(--form-font-family);
+    font-family: var(--alternative-font-family);
     font-size: 12px;
 }
 
@@ -135,55 +144,44 @@
 }
 
 #ohh-this-is-nice {
-    margin-left: var(--left-margin);
+    margin-left: var(--default-margin);
 }
 
-#ohh-this-is-nice > .background {
-    height: 100vh;
+#ohh-this-is-nice .background {
+    height: 70vh;
+    min-height: calc(2 / 3 * var(--image-block-height) + 100px);
     background-image: url(/asset/background.png);
     background-size: cover;
     background-attachment: fixed;
 }
 
-#ohh-this-is-nice > .content {
+#ohh-this-is-nice .display-block {
     margin-top: calc(-2 / 3 * var(--image-block-height));
-    margin-right: var(--left-margin);
+    margin-right: var(--default-margin);
 }
 
-#ohh-this-is-nice > .content .image-block {
-    background-image: url(/asset/mountain2.png);
+#ohh-this-is-nice .display-block .image-block {
+    background-image: url("/asset/mountain2.png");
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
     #sleek-as-fkuc .content {
-        margin: 50px;
+        left: var(--mobile-margin);
+    }
+
+    #melbourne-australia {
+        margin: var(--mobile-margin);
     }
 
     #bright-ass-orange {
         margin: 0px;
     }
 
-    #melbourne-australia {
-        margin: 50px;
+    #words-and-such .header__content {
+        margin-left: 0px;
     }
 
-    #words-and-such .header .content {
-        flex-direction: column;
-        margin: 0px;
-        width: 100%;
-        height: auto;
-    }
-
-    #words-and-such .header .content .text {
-        width: 100%;
-    }
-
-    #words-and-such .header .content .avatar {
-        width: 100%;
-        height: 500px;
-    }
-
-    #words-and-such > .content {
+    #words-and-such .paragraph {
         margin: 0px;
         padding: 50px;
     }
@@ -196,12 +194,26 @@
         flex-direction: column;
     }
 
-    #ohh-this-is-nice, #ohh-this-is-nice > .content {
+    #ohh-this-is-nice,
+    #ohh-this-is-nice .display-block {
         margin: 0px;
     }
 }
 
-.title {
-    width: 80%;
-    margin-bottom: 20px;
+@media only screen and (max-width: 800px) {
+    #words-and-such .header__content {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #words-and-such .header__content {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #words-and-such .header__content__text {
+        width: 100%;
+    }
 }

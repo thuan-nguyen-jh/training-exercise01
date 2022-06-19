@@ -1,13 +1,13 @@
 @import "/css/core/base.css";
 
 footer {
-    padding:70px 70px 100px var(--left-margin) ;
+    padding:70px 70px 100px var(--default-margin) ;
     background-color: var(--darker-blue-color);
     color: white;
 
-    font-family: var(--form-font-family);
-    font-size: 12px;
-    line-height: 26px;
+    font-family: var(--alternative-font-family);
+    font-size: 0.8rem;
+    line-height: 1.8rem;
 }
 
 footer nav > ul {
@@ -29,8 +29,8 @@ footer > p {
     margin-top: 50px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
     footer {
-        padding: 50px;
+        padding: var(--mobile-margin);
     }
 }

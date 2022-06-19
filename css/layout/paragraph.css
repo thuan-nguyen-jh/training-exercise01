@@ -1,18 +1,17 @@
 .paragraph {
-    display: flex;
+    column-count: 2;
     column-gap: 25px;
 }
 
-.paragraph .col {
-    flex: 1;
-}
-
 .paragraph p {
-    margin-top: 30px;
+    margin-bottom: 30px;
+
+    page-break-inside: avoid;
+    break-inside: avoid;
 }
 
-@media only screen and (max-width: 600px) { 
+@media only screen and (max-width: 800px) { 
     .paragraph {
-        flex-direction: column;
+        column-count: 1;   
     }
 }
