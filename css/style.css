@@ -33,6 +33,15 @@
     color: white;
 }
 
+#sleek-as-fkuc .content::before,
+#sleek-as-fkuc .content::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 3px;
+    background-color: grey;
+}
+
 #sleek-as-fkuc .content__text {
     margin-top: 50px;
     margin-bottom: 10px;
@@ -41,12 +50,6 @@
 #sleek-as-fkuc .content__nav {
     display: flex;
     gap: 50px;
-}
-
-#sleek-as-fkuc .content__deco {
-    width: 20px;
-    height: 3px;
-    background-color: grey;
 }
 
 #sleek-as-fkuc .navigation {
