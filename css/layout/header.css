@@ -3,14 +3,31 @@ header {
     position: fixed;
 
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    padding-left: var(--default-margin);
+    padding: 0px var(--default-margin);
+}
+
+header .menu-btn {
+    display: none;
+    height: 30px;
+    cursor: pointer;
+}
+
+header .logo {
+    align-self: center;
+    transform: rotate(90deg) translateX(50%);
+    transition-duration: 1s;
 }
 
 /* Header with solid color (not transparent) */
 header.solid,
 header.solid ul > li > ul {
     background-color: black;
+}
+
+header.solid .logo {
+    transform: revert;
 }
 
 /* Transition when change background color */
@@ -82,22 +99,29 @@ header nav > ul > li > ul > li.active > a {
 /* Change padding */
 @media only screen and (max-width: 1100px) {
     header {
-        padding-left: var(--mobile-margin);
+        padding: 0px var(--mobile-margin);
     }
 }
 
 /* Change layout */
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
     header {
         padding: 20px var(--mobile-margin);
     }
 
     header nav {
         width: 100%;
+        display: none;
+    }
+
+    header nav.show,
+    header .menu-btn {
+        display: block;
     }
 
     header .logo {
-        display: none;
+        order: -1;
+        transform: revert;
     }
 
     /* Main navigation */
