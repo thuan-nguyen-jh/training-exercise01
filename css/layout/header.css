@@ -1,23 +1,27 @@
-@import "/css/core/base.css";
-
 header {
-    position: absolute;
-    top: 0px;
+    width: 100%;
+    position: fixed;
 
     display: flex;
     justify-content: space-between;
-    width: 100%;
-
-    padding: 50px;
     padding-left: var(--default-margin);
 }
 
-header nav ul {
-    display: flex;
-    column-gap: 50px;
+/* Header with solid color (not transparent) */
+header.solid,
+header.solid ul > li > ul {
+    background-color: black;
+}
+
+/* Transition when change background color */
+header,
+header ul > li > ul {
+    transition: background-color 1s;
 }
 
 header nav a {
+    display: block;
+
     font-family: var(--header-font-family);
     font-size: 13px;
     text-transform: uppercase;
@@ -25,27 +29,103 @@ header nav a {
     color: white;
 }
 
-header nav li {
-    padding: 10px 0px;
+/* Main navigation */
+header nav > ul {
+    display: flex;
+    column-gap: 50px;
+}
+
+header nav > ul > li > a {
+    padding: 10px;
+    margin: 10px 0px;
     border-bottom: 2px solid transparent;
 }
 
-header nav li.active {
+header nav > ul > li:hover > a {
+    border-bottom-color: var(--dark-blue-color);
+}
+
+header nav > ul > li.active > a {
     border-bottom-color: var(--primary-color);
 }
 
-@media only screen and (max-width: 1000px) {
+header nav > ul > li > a:not(:only-child)::after {
+    content: "⯆";
+    margin-left: 10px;
+}
+
+/* Sub navigation */
+header nav > ul > li > ul {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+}
+
+header nav > ul > li:hover > ul {
+    display: flex;
+}
+
+header nav > ul > li > ul > li > a {
+    padding: 10px;
+    padding-right: 50px;
+    border-left: 2px solid transparent;
+}
+
+header nav > ul > li > ul > li:hover > a {
+    border-left-color: var(--dark-blue-color);
+}
+
+header nav > ul > li > ul > li.active > a {
+    border-left-color: var(--primary-color);
+}
+
+/* Change padding */
+@media only screen and (max-width: 1100px) {
     header {
-        padding: var(--mobile-margin);
+        padding-left: var(--mobile-margin);
     }
 }
 
+/* Change layout */
 @media only screen and (max-width: 700px) {
-    header nav ul {
-        flex-direction: column;
+    header {
+        padding: 20px var(--mobile-margin);
     }
-    
+
+    header nav {
+        width: 100%;
+    }
+
     header .logo {
         display: none;
     }
-  }
+
+    /* Main navigation */
+    header nav > ul {
+        flex-direction: column;
+    }
+
+    header nav > ul > li > a {
+        margin: 0px;
+        border: none;
+        border-left: 2px solid transparent;
+    }
+
+    header nav > ul > li:hover > a {
+        border-left-color: var(--dark-blue-color);
+    }
+
+    header nav > ul > li.active > a {
+        border-left-color: var(--primary-color);
+    }
+
+    /* Sub navigation */
+    header nav > ul > li > ul {
+        position: static;
+        background-color: transparent !important;
+    }
+
+    header nav > ul > li > ul > li > a {
+        padding-left: 30px;
+    }
+}
