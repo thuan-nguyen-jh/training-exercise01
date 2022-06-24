@@ -14,7 +14,7 @@
 #sleek-as-fkuc {
     position: relative;
     height: 100vh;
-    min-height: calc(var(--image-block-height) + 500px);
+    min-height: calc(2*var(--image-block-height) + 500px);
     z-index: -1;
 
     background-image: url("/asset/background.png");
@@ -232,6 +232,10 @@
 }
 
 @media only screen and (max-width: 800px) {
+    #sleek-as-fkuc {
+        min-height: calc(var(--image-block-height) + 500px);
+    }
+
     #words-and-such .header__content {
         width: 100%;
         height: auto;
@@ -244,11 +248,15 @@
     }
     
     #words-and-such .header__content {
-        flex-direction: column;
-        height: auto;
+        display: block;
+        min-width: unset;
     }
 
     #words-and-such .header__content__text {
         width: 100%;
+    }
+
+    #words-and-such .header__content__avatar {
+        display: none;
     }
 }
