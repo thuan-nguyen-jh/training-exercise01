@@ -14,7 +14,7 @@
 #sleek-as-fkuc {
     position: relative;
     height: 100vh;
-    min-height: calc(2*var(--image-block-height) + 500px);
+    min-height: calc(var(--image-block-height) + 500px);
     z-index: -1;
 
     background-image: url("/asset/background.png");
@@ -201,13 +201,23 @@
 }
 
 @media only screen and (max-width: 1100px) {
-    #sleek-as-fkuc .content,
+    #sleek-as-fkuc {
+        height: 50vh;
+        min-height: 700px;
+    }
+
+    #sleek-as-fkuc .content {
+        left: var(--tablet-margin);
+        bottom: 150px;
+    }
+
     #sleek-as-fkuc .navigation {
-        left: var(--mobile-margin);
+        left: var(--tablet-margin);
+        top: calc(100% - 100px)
     }
 
     #melbourne-australia {
-        margin: var(--mobile-margin);
+        margin: var(--tablet-margin);
     }
 
     #bright-ass-orange {
@@ -238,21 +248,41 @@
 }
 
 @media only screen and (max-width: 800px) {
-    #sleek-as-fkuc {
-        min-height: calc(var(--image-block-height) + 500px);
-    }
-
     #words-and-such .header__content {
         width: 100%;
         height: auto;
     }
+
+    #ohh-this-is-nice .background {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 700px) {
-    #sleek-as-fkuc .content {
+    .title {
         width: auto;
     }
-    
+    #sleek-as-fkuc {
+        height: auto;
+        min-height: unset;
+    }
+
+    #sleek-as-fkuc .content {
+        width: 80%;
+        position: static;
+        padding-left: var(--mobile-margin);
+        padding-top: 100px;
+    }
+
+    #sleek-as-fkuc .navigation {
+        position: static;
+        padding: 50px var(--mobile-margin);
+    }
+
+    #melbourne-australia {
+        margin: var(--mobile-margin);
+    }
+
     #words-and-such .header__content {
         display: block;
         min-width: unset;
@@ -260,9 +290,18 @@
 
     #words-and-such .header__content__text {
         width: 100%;
+        padding: var(--mobile-margin);
     }
 
     #words-and-such .header__content__avatar {
         display: none;
+    }
+
+    #words-and-such .paragraph {
+        padding: var(--mobile-margin);
+    }
+
+    #take-action {
+        padding: var(--mobile-margin);
     }
 }

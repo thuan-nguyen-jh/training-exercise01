@@ -37,4 +37,18 @@
     .display-block {
         grid-template-columns: 1fr;
     }
+
+    .display-block > .vertical-block,
+    .display-block > .horizontal-block {
+        padding: var(--mobile-margin);
+    }
+
+    .display-block > .vertical-block p {
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+
+    .display-block > .image-block {
+        display: none;
+    }
 }

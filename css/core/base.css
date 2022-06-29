@@ -5,7 +5,8 @@
     --gray-color: #cfcfcf;
 
     --default-margin: 175px;
-    --mobile-margin: 50px;
+    --tablet-margin: 50px;
+    --mobile-margin: 24px;
     --primary-color: var(--orange-color);
 }
 

@@ -1,6 +1,8 @@
 header {
     width: 100%;
     position: fixed;
+    top: 0px;
+    left: 0px;
 
     display: flex;
     flex-wrap: wrap;
@@ -111,14 +113,14 @@ header nav > ul > li > ul > li.active > a {
 /* Change padding */
 @media only screen and (max-width: 1100px) {
     header {
-        padding: 0px var(--mobile-margin);
+        padding: 0px var(--tablet-margin);
     }
 }
 
 /* Change layout */
 @media only screen and (max-width: 800px) {
     header {
-        padding: 20px var(--mobile-margin);
+        padding: 20px var(--tablet-margin);
         background-color: black;
     }
 
