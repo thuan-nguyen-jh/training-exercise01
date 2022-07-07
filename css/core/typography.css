@@ -1,4 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@300;400&family=Raleway:wght@300;400&display=swap");
+@font-face {
+    font-family: "Raleway";
+    font-style: normal;
+    src: local("Raleway"), 
+         url("/font/Raleway/Raleway-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    src: local("Open Sans"),
+         url("/font/Open_Sans/OpenSans-VariableFont_wdth.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    src: local("Montserrat")
+         url("/font/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
 
 :root {
     --header-font-family: "Raleway", sans-serif;
